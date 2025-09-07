@@ -1,70 +1,125 @@
-# Getting Started with Create React App
+# 📚 Book Finder
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Book Finder is a React-based web application that allows users to search for books using the [Open Library API](https://openlibrary.org/developers/api).  
+It provides multiple filters (title, author, year, language), dark mode support, and a favorites section to save books for later.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+- 🔍 Search books by **title**, **author**, or **subject**
+- 📅 Filter books by **year**
+- 🌐 Filter books by **language**
+- ⭐ Add/remove books to/from **Favorites**
+- 🌓 **Dark mode toggle** (saves preference in local storage)
+- 📱 Responsive design with **Tailwind CSS**
+- ⚡ Fast client-side routing using **React Router**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Tech Stack
 
-### `npm test`
+- **React.js** – UI library
+- **React Router DOM** – for navigation
+- **Tailwind CSS** – for styling
+- **Open Library API** – for fetching book data
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 📂 Project Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+book-finder/
+├── public/             # Static assets
+├── src/
+│   ├── components/     # Reusable UI components (Navbar, BookCard, etc.)
+│   ├── pages/          # Page components (Home, BookDetail, Favorites)
+│   ├── App.js          # Main App component
+│   ├── index.js        # Entry point
+│   ├── index.css       # Global styles (Tailwind included)
+│   └── ...
+├── tailwind.config.js  # Tailwind configuration
+├── postcss.config.js   # PostCSS configuration
+├── package.json        # Dependencies and scripts
+└── README.md           # Project documentation
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## ⚙️ Installation & Setup
 
-### `npm run eject`
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/book-finder.git
+   cd book-finder
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. **Start development server**
+   ```bash
+   npm start
+   ```
+   The app will be available at **http://localhost:3000**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+4. **Build for production**
+   ```bash
+   npm run build
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 🎨 Tailwind CSS Setup
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This project uses Tailwind CSS for styling.  
+Configuration files:
+- `tailwind.config.js`
+- `postcss.config.js`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Dark mode is enabled via the `class` strategy.  
+```js
+// tailwind.config.js
+module.exports = {
+  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  darkMode: "class",
+  theme: { extend: {} },
+  plugins: [],
+};
+```
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🌙 Dark Mode
 
-### Analyzing the Bundle Size
+- Toggle button in Navbar (`🌙 / 🌞`)
+- Saves theme preference in `localStorage`
+- Applied globally via `document.documentElement.classList`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 🖼️ Screenshots
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Home Page
+![Book Finder Screenshot](./screenshot-home.png)
 
-### Advanced Configuration
+### Book Details
+![Book Details Screenshot](./screenshot-detail.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## 🔮 Future Improvements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Pagination support for large search results
+- Book cover thumbnails
+- Export/Import favorites
+- Offline mode with service workers
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🤝 Contributing
+
+Contributions are welcome!  
+Feel free to fork the repo and submit a pull request.
