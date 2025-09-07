@@ -34,10 +34,10 @@ book-finder/
 ├── src/
 │   ├── components/     # Reusable UI components (Navbar, BookCard, etc.)
 │   ├── pages/          # Page components (Home, BookDetail, Favorites)
+│   ├── utils/          # Local Storage, and open libaries.
 │   ├── App.js          # Main App component
 │   ├── index.js        # Entry point
 │   ├── index.css       # Global styles (Tailwind included)
-│   └── ...
 ├── tailwind.config.js  # Tailwind configuration
 ├── postcss.config.js   # PostCSS configuration
 ├── package.json        # Dependencies and scripts
